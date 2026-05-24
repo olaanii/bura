@@ -14,7 +14,8 @@ class OrderDetailsScreen extends StatelessWidget {
           const Positioned.fill(
             child: Padding(
               padding: EdgeInsets.fromLTRB(16, 52, 16, 16),
-              child: MapBackdrop(cornerRadius: 32, blur: true, showCenterPin: false),
+              child: MapBackdrop(
+                  cornerRadius: 32, blur: true, showCenterPin: false),
             ),
           ),
           SafeArea(
@@ -51,7 +52,8 @@ class _DetailsCard extends StatelessWidget {
       decoration: BoxDecoration(
         color: AppColors.white,
         borderRadius: BorderRadius.circular(26),
-        border: Border.all(color: AppColors.black.withOpacity(0.06), width: 1),
+        border: Border.all(
+            color: AppColors.black.withValues(alpha: 0.06), width: 1),
       ),
       padding: const EdgeInsets.fromLTRB(16, 16, 16, 14),
       child: Column(
@@ -63,8 +65,8 @@ class _DetailsCard extends StatelessWidget {
                 child: Text(
                   'Order AB-846861',
                   style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                    fontWeight: FontWeight.w900,
-                  ),
+                        fontWeight: FontWeight.w900,
+                      ),
                 ),
               ),
               const Pill(
@@ -80,9 +82,9 @@ class _DetailsCard extends StatelessWidget {
             child: Text(
               'Tracking number',
               style: Theme.of(context).textTheme.labelMedium?.copyWith(
-                fontWeight: FontWeight.w800,
-                color: AppColors.grey500,
-              ),
+                    fontWeight: FontWeight.w800,
+                    color: AppColors.grey500,
+                  ),
             ),
           ),
           const SizedBox(height: 8),
@@ -99,32 +101,35 @@ class _DetailsCard extends StatelessWidget {
                   child: Text(
                     '1641498165216486',
                     style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                      fontWeight: FontWeight.w900,
-                      color: AppColors.white,
-                      letterSpacing: 0.2,
-                    ),
+                          fontWeight: FontWeight.w900,
+                          color: AppColors.white,
+                          letterSpacing: 0.2,
+                        ),
                   ),
                 ),
                 Container(
                   width: 34,
                   height: 34,
                   decoration: BoxDecoration(
-                    color: AppColors.white.withOpacity(0.16),
+                    color: AppColors.white.withValues(alpha: 0.16),
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  child: const Icon(Icons.copy_rounded, size: 18, color: AppColors.white),
+                  child: const Icon(Icons.copy_rounded,
+                      size: 18, color: AppColors.white),
                 ),
               ],
             ),
           ),
           const SizedBox(height: 14),
-          const _KeyValueRow(label: 'Address', value: '350 Main St, San Francisco, CA'),
+          const _KeyValueRow(
+              label: 'Address', value: '350 Main St, San Francisco, CA'),
           const SizedBox(height: 10),
           const _KeyValueRow(label: 'Recipient', value: 'Daniel Foster'),
           const SizedBox(height: 10),
           const _KeyValueRow(label: 'Phone', value: '+1 415 782 3490'),
           const SizedBox(height: 10),
-          const _KeyValueRow(label: 'Delivery time', value: '22 March, 10:00 Am'),
+          const _KeyValueRow(
+              label: 'Delivery time', value: '22 March, 10:00 Am'),
           const SizedBox(height: 10),
           const _KeyValueRow(label: 'Payment method', value: 'Cash'),
           const SizedBox(height: 14),
@@ -133,7 +138,8 @@ class _DetailsCard extends StatelessWidget {
             decoration: BoxDecoration(
               color: AppColors.grey100,
               borderRadius: BorderRadius.circular(18),
-              border: Border.all(color: AppColors.black.withOpacity(0.05), width: 1),
+              border: Border.all(
+                  color: AppColors.black.withValues(alpha: 0.05), width: 1),
             ),
             padding: const EdgeInsets.fromLTRB(14, 12, 14, 12),
             child: Column(
@@ -142,17 +148,17 @@ class _DetailsCard extends StatelessWidget {
                 Text(
                   'Delivery notes',
                   style: Theme.of(context).textTheme.labelMedium?.copyWith(
-                    fontWeight: FontWeight.w800,
-                    color: AppColors.grey500,
-                  ),
+                        fontWeight: FontWeight.w800,
+                        color: AppColors.grey500,
+                      ),
                 ),
                 const SizedBox(height: 6),
                 Text(
                   'Please ensure the package is handled with care\n— fragile items inside.',
                   style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    fontWeight: FontWeight.w700,
-                    height: 1.35,
-                  ),
+                        fontWeight: FontWeight.w700,
+                        height: 1.35,
+                      ),
                 ),
               ],
             ),
@@ -177,9 +183,9 @@ class _KeyValueRow extends StatelessWidget {
           child: Text(
             label,
             style: Theme.of(context).textTheme.labelMedium?.copyWith(
-              fontWeight: FontWeight.w800,
-              color: AppColors.grey500,
-            ),
+                  fontWeight: FontWeight.w800,
+                  color: AppColors.grey500,
+                ),
           ),
         ),
         Expanded(
@@ -187,9 +193,9 @@ class _KeyValueRow extends StatelessWidget {
             value,
             textAlign: TextAlign.end,
             style: Theme.of(context).textTheme.labelLarge?.copyWith(
-              fontWeight: FontWeight.w900,
-              color: AppColors.black,
-            ),
+                  fontWeight: FontWeight.w900,
+                  color: AppColors.black,
+                ),
           ),
         ),
       ],
@@ -211,11 +217,13 @@ class _BackButton extends StatelessWidget {
         width: 38,
         height: 38,
         decoration: BoxDecoration(
-          color: AppColors.white.withOpacity(0.86),
+          color: AppColors.white.withValues(alpha: 0.86),
           borderRadius: BorderRadius.circular(999),
-          border: Border.all(color: AppColors.black.withOpacity(0.06), width: 1),
+          border: Border.all(
+              color: AppColors.black.withValues(alpha: 0.06), width: 1),
         ),
-        child: const Icon(Icons.arrow_back_rounded, size: 20, color: AppColors.black),
+        child: const Icon(Icons.arrow_back_rounded,
+            size: 20, color: AppColors.black),
       ),
     );
   }

@@ -44,35 +44,39 @@ class HomeScreen extends StatelessWidget {
                   child: Container(
                     height: 42,
                     decoration: BoxDecoration(
-                      color: AppColors.white.withOpacity(0.92),
+                      color: AppColors.white.withValues(alpha: 0.92),
                       borderRadius: BorderRadius.circular(14),
-                      border: Border.all(color: AppColors.black.withOpacity(0.06), width: 1),
+                      border: Border.all(
+                          color: AppColors.black.withOpacity(0.06), width: 1),
                     ),
                     padding: const EdgeInsets.symmetric(horizontal: 12),
                     child: Row(
                       children: [
                         Text(
                           'Current Delivery',
-                          style: Theme.of(context).textTheme.labelMedium?.copyWith(
-                            color: AppColors.grey500,
-                            fontWeight: FontWeight.w700,
-                          ),
+                          style:
+                              Theme.of(context).textTheme.labelMedium?.copyWith(
+                                    color: AppColors.grey500,
+                                    fontWeight: FontWeight.w700,
+                                  ),
                         ),
                         const SizedBox(width: 8),
                         Text(
                           '-',
-                          style: Theme.of(context).textTheme.labelMedium?.copyWith(
-                            color: AppColors.grey500,
-                            fontWeight: FontWeight.w700,
-                          ),
+                          style:
+                              Theme.of(context).textTheme.labelMedium?.copyWith(
+                                    color: AppColors.grey500,
+                                    fontWeight: FontWeight.w700,
+                                  ),
                         ),
                         const SizedBox(width: 8),
                         Text(
                           'AB-846861',
-                          style: Theme.of(context).textTheme.labelMedium?.copyWith(
-                            color: AppColors.black,
-                            fontWeight: FontWeight.w900,
-                          ),
+                          style:
+                              Theme.of(context).textTheme.labelMedium?.copyWith(
+                                    color: AppColors.black,
+                                    fontWeight: FontWeight.w900,
+                                  ),
                         ),
                       ],
                     ),
@@ -144,8 +148,8 @@ class HomeScreen extends StatelessWidget {
             Text(
               'My Orders',
               style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                fontWeight: FontWeight.w900,
-              ),
+                    fontWeight: FontWeight.w900,
+                  ),
             ),
             const SizedBox(height: 12),
             OrderRow(
@@ -201,9 +205,10 @@ class _MapFloatingButton extends StatelessWidget {
         width: 34,
         height: 34,
         decoration: BoxDecoration(
-          color: AppColors.white.withOpacity(0.86),
+          color: AppColors.white.withValues(alpha: 0.86),
           borderRadius: BorderRadius.circular(999),
-          border: Border.all(color: AppColors.black.withOpacity(0.06), width: 1),
+          border: Border.all(
+              color: AppColors.black.withValues(alpha: 0.06), width: 1),
         ),
         child: Icon(icon, size: 18, color: AppColors.black),
       ),
@@ -226,7 +231,8 @@ class _Flags extends StatelessWidget {
         decoration: BoxDecoration(
           color: AppColors.grey100,
           borderRadius: BorderRadius.circular(999),
-          border: Border.all(color: AppColors.black.withOpacity(0.07), width: 1),
+          border: Border.all(
+              color: AppColors.black.withValues(alpha: 0.07), width: 1),
         ),
         alignment: Alignment.center,
         child: Text(flag, style: const TextStyle(fontSize: 14)),

@@ -27,9 +27,9 @@ class MoveTopBar extends StatelessWidget {
           Text(
             'Move.',
             style: Theme.of(context).textTheme.titleMedium?.copyWith(
-              color: AppColors.white,
-              fontWeight: FontWeight.w800,
-            ),
+                  color: AppColors.white,
+                  fontWeight: FontWeight.w800,
+                ),
           ),
           const Spacer(),
           IconButton(
@@ -50,7 +50,8 @@ class MoveTopBar extends StatelessWidget {
               decoration: BoxDecoration(
                 color: AppColors.grey200,
                 borderRadius: BorderRadius.circular(999),
-                border: Border.all(color: AppColors.black.withOpacity(0.18), width: 1),
+                border: Border.all(
+                    color: AppColors.black.withValues(alpha: 0.18), width: 1),
               ),
               child: const Icon(Icons.person, size: 18, color: AppColors.black),
             ),
@@ -78,7 +79,8 @@ class _LogoMark extends StatelessWidget {
           color: AppColors.yellow,
           borderRadius: BorderRadius.circular(10),
         ),
-        child: const Icon(Icons.north_east_rounded, size: 18, color: AppColors.black),
+        child: const Icon(Icons.north_east_rounded,
+            size: 18, color: AppColors.black),
       ),
     );
   }

@@ -64,7 +64,7 @@ class MapBackdrop extends StatelessWidget {
           Positioned.fill(
             child: BackdropFilter(
               filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
-              child: Container(color: Colors.white.withOpacity(0.06)),
+              child: Container(color: Colors.white.withValues(alpha: 0.06)),
             ),
           ),
         ],
@@ -84,13 +84,14 @@ class _Pin extends StatelessWidget {
         borderRadius: BorderRadius.circular(999),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.18),
+            color: Colors.black.withValues(alpha: 0.18),
             blurRadius: 16,
             offset: const Offset(0, 8),
           ),
         ],
       ),
-      child: const Icon(Icons.location_on_rounded, size: 18, color: AppColors.white),
+      child: const Icon(Icons.location_on_rounded,
+          size: 18, color: AppColors.white),
     );
   }
 }
@@ -106,7 +107,7 @@ class _ParcelBox extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.16),
+            color: Colors.black.withValues(alpha: 0.16),
             blurRadius: 18,
             offset: const Offset(0, 10),
           ),
@@ -126,10 +127,12 @@ class _MapPainter extends CustomPainter {
 
     const step = 28.0;
     for (double x = -step; x < size.width + step; x += step) {
-      canvas.drawLine(Offset(x, 0), Offset(x + size.height * 0.2, size.height), paintGrid);
+      canvas.drawLine(
+          Offset(x, 0), Offset(x + size.height * 0.2, size.height), paintGrid);
     }
     for (double y = -step; y < size.height + step; y += step) {
-      canvas.drawLine(Offset(0, y), Offset(size.width, y - size.width * 0.1), paintGrid);
+      canvas.drawLine(
+          Offset(0, y), Offset(size.width, y - size.width * 0.1), paintGrid);
     }
 
     final route = Paint()
@@ -145,7 +148,7 @@ class _MapPainter extends CustomPainter {
       ..lineTo(size.width * 0.30, size.height * 0.58);
 
     final routeShadow = Paint()
-      ..color = Colors.black.withOpacity(0.08)
+      ..color = Colors.black.withValues(alpha: 0.08)
       ..style = PaintingStyle.stroke
       ..strokeWidth = 9
       ..strokeCap = StrokeCap.round;

@@ -38,7 +38,8 @@ class TrackingScreen extends StatelessWidget {
                 child: _BottomCard(
                   onTapOrderDetails: () {
                     Navigator.of(context).push(
-                      MaterialPageRoute(builder: (_) => const OrderDetailsScreen()),
+                      MaterialPageRoute(
+                          builder: (_) => const OrderDetailsScreen()),
                     );
                   },
                 ),
@@ -62,7 +63,8 @@ class _BottomCard extends StatelessWidget {
       decoration: BoxDecoration(
         color: AppColors.white,
         borderRadius: BorderRadius.circular(26),
-        border: Border.all(color: AppColors.black.withOpacity(0.06), width: 1),
+        border: Border.all(
+            color: AppColors.black.withValues(alpha: 0.06), width: 1),
       ),
       padding: const EdgeInsets.fromLTRB(16, 16, 16, 14),
       child: Column(
@@ -77,7 +79,8 @@ class _BottomCard extends StatelessWidget {
                   color: AppColors.grey200,
                   borderRadius: BorderRadius.circular(999),
                 ),
-                child: const Icon(Icons.person, size: 22, color: AppColors.black),
+                child:
+                    const Icon(Icons.person, size: 22, color: AppColors.black),
               ),
               const SizedBox(width: 12),
               Expanded(
@@ -88,18 +91,21 @@ class _BottomCard extends StatelessWidget {
                       children: [
                         Text(
                           'Ethan Walker',
-                          style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                            fontWeight: FontWeight.w900,
-                          ),
+                          style:
+                              Theme.of(context).textTheme.titleSmall?.copyWith(
+                                    fontWeight: FontWeight.w900,
+                                  ),
                         ),
                         const SizedBox(width: 8),
-                        const Icon(Icons.star_rounded, size: 16, color: AppColors.yellow),
+                        const Icon(Icons.star_rounded,
+                            size: 16, color: AppColors.yellow),
                         Text(
                           '4.8',
-                          style: Theme.of(context).textTheme.labelMedium?.copyWith(
-                            fontWeight: FontWeight.w800,
-                            color: AppColors.grey500,
-                          ),
+                          style:
+                              Theme.of(context).textTheme.labelMedium?.copyWith(
+                                    fontWeight: FontWeight.w800,
+                                    color: AppColors.grey500,
+                                  ),
                         ),
                       ],
                     ),
@@ -107,9 +113,9 @@ class _BottomCard extends StatelessWidget {
                     Text(
                       'Delivery Driver',
                       style: Theme.of(context).textTheme.labelMedium?.copyWith(
-                        fontWeight: FontWeight.w700,
-                        color: AppColors.grey500,
-                      ),
+                            fontWeight: FontWeight.w700,
+                            color: AppColors.grey500,
+                          ),
                     ),
                   ],
                 ),
@@ -130,16 +136,16 @@ class _BottomCard extends StatelessWidget {
                     Text(
                       'Drop-off at 350 Main St',
                       style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                        fontWeight: FontWeight.w900,
-                      ),
+                            fontWeight: FontWeight.w900,
+                          ),
                     ),
                     const SizedBox(height: 3),
                     Text(
                       'San Francisco, CA',
                       style: Theme.of(context).textTheme.labelMedium?.copyWith(
-                        fontWeight: FontWeight.w700,
-                        color: AppColors.grey500,
-                      ),
+                            fontWeight: FontWeight.w700,
+                            color: AppColors.grey500,
+                          ),
                     ),
                   ],
                 ),
@@ -186,17 +192,17 @@ class _Timeline extends StatelessWidget {
             Text(
               '8:15 am',
               style: Theme.of(context).textTheme.labelMedium?.copyWith(
-                fontWeight: FontWeight.w800,
-                color: AppColors.grey500,
-              ),
+                    fontWeight: FontWeight.w800,
+                    color: AppColors.grey500,
+                  ),
             ),
             const Spacer(),
             Text(
               '04:20 pm',
               style: Theme.of(context).textTheme.labelMedium?.copyWith(
-                fontWeight: FontWeight.w800,
-                color: AppColors.grey500,
-              ),
+                    fontWeight: FontWeight.w800,
+                    color: AppColors.grey500,
+                  ),
             ),
           ],
         ),
@@ -233,8 +239,8 @@ class _Timeline extends StatelessWidget {
                   ),
                 ),
               ),
-              Positioned(left: 0, child: _Dot(color: AppColors.yellow)),
-              Positioned(right: 0, child: _Dot(color: AppColors.grey200)),
+              const Positioned(left: 0, child: _Dot(color: AppColors.yellow)),
+              const Positioned(right: 0, child: _Dot(color: AppColors.grey200)),
               Align(
                 alignment: const Alignment(0.06, 0),
                 child: Container(
@@ -246,13 +252,14 @@ class _Timeline extends StatelessWidget {
                     border: Border.all(color: AppColors.white, width: 3),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.black.withOpacity(0.18),
+                        color: Colors.black.withValues(alpha: 0.18),
                         blurRadius: 18,
                         offset: const Offset(0, 10),
                       ),
                     ],
                   ),
-                  child: const Icon(Icons.navigation_rounded, size: 14, color: AppColors.white),
+                  child: const Icon(Icons.navigation_rounded,
+                      size: 14, color: AppColors.white),
                 ),
               ),
             ],
@@ -304,7 +311,8 @@ class _MenuRow extends StatelessWidget {
         decoration: BoxDecoration(
           color: AppColors.grey100,
           borderRadius: BorderRadius.circular(14),
-          border: Border.all(color: AppColors.black.withOpacity(0.05), width: 1),
+          border: Border.all(
+              color: AppColors.black.withValues(alpha: 0.05), width: 1),
         ),
         child: Row(
           children: [
@@ -314,8 +322,8 @@ class _MenuRow extends StatelessWidget {
               child: Text(
                 label,
                 style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                  fontWeight: FontWeight.w900,
-                ),
+                      fontWeight: FontWeight.w900,
+                    ),
               ),
             ),
             const Icon(Icons.chevron_right_rounded, color: AppColors.grey500),
@@ -340,11 +348,13 @@ class _BackButton extends StatelessWidget {
         width: 38,
         height: 38,
         decoration: BoxDecoration(
-          color: AppColors.white.withOpacity(0.86),
+          color: AppColors.white.withValues(alpha: 0.86),
           borderRadius: BorderRadius.circular(999),
-          border: Border.all(color: AppColors.black.withOpacity(0.06), width: 1),
+          border: Border.all(
+              color: AppColors.black.withValues(alpha: 0.06), width: 1),
         ),
-        child: const Icon(Icons.arrow_back_rounded, size: 20, color: AppColors.black),
+        child: const Icon(Icons.arrow_back_rounded,
+            size: 20, color: AppColors.black),
       ),
     );
   }

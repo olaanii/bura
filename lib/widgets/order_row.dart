@@ -31,7 +31,8 @@ class OrderRow extends StatelessWidget {
         decoration: BoxDecoration(
           color: AppColors.white,
           borderRadius: BorderRadius.circular(18),
-          border: Border.all(color: AppColors.black.withOpacity(0.06), width: 1),
+          border: Border.all(
+              color: AppColors.black.withValues(alpha: 0.06), width: 1),
         ),
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
         child: Row(
@@ -47,17 +48,18 @@ class OrderRow extends StatelessWidget {
                       Text(
                         from,
                         style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                          fontWeight: FontWeight.w800,
-                        ),
+                              fontWeight: FontWeight.w800,
+                            ),
                       ),
                       const SizedBox(width: 8),
-                      const Icon(Icons.arrow_forward_rounded, size: 16, color: AppColors.grey500),
+                      const Icon(Icons.arrow_forward_rounded,
+                          size: 16, color: AppColors.grey500),
                       const SizedBox(width: 8),
                       Text(
                         to,
                         style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                          fontWeight: FontWeight.w800,
-                        ),
+                              fontWeight: FontWeight.w800,
+                            ),
                       ),
                     ],
                   ),
@@ -65,9 +67,9 @@ class OrderRow extends StatelessWidget {
                   Text(
                     orderId,
                     style: Theme.of(context).textTheme.labelMedium?.copyWith(
-                      fontWeight: FontWeight.w700,
-                      color: AppColors.grey500,
-                    ),
+                          fontWeight: FontWeight.w700,
+                          color: AppColors.grey500,
+                        ),
                   ),
                 ],
               ),
